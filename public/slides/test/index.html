@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.2.0">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/slides/test/">
+
+  <title>Presentation Ninja | Live Lively</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/reveal_custom.min.css">
+
+  
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/css/print/pdf.css' : 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+</head>
+<body>
+
+  
+<div class="reveal">
+  <div class="slides">
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>background-image: url(<a href="https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg</a>)</p>
+
+<p>???</p>
+
+<p>Image credit: <a href="https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg" target="_blank">Wikimedia Commons</a></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>class: center, middle</p>
+
+<h1 id="xaringan">xaringan</h1>
+
+<h3 id="ʃæ-riŋ-ɡæn">/ʃæ.&lsquo;riŋ.ɡæn/</h3>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>class: inverse, center, middle</p>
+
+<h1 id="get-started">Get Started</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="hello-world">Hello World</h1>
+
+<p>Install the <strong>xaringan</strong> package from <a href="https://github.com/yihui/xaringan" target="_blank">Github</a>:</p>
+
+<pre><code class="language-r">devtools::install_github(&quot;yihui/xaringan&quot;)
+</code></pre>
+
+<p>&ndash;</p>
+
+<p>You are recommended to use the <a href="https://www.rstudio.com/products/rstudio/" target="_blank">RStudio IDE</a>, but you do not have to.</p>
+
+<ul>
+<li>Create a new R Markdown document from the menu <code>File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation</code>;<sup>1</sup></li>
+</ul>
+
+<p>&ndash;</p>
+
+<ul>
+<li>Click the <code>Knit</code> button to compile it;</li>
+</ul>
+
+<p>&ndash;</p>
+
+<ul>
+<li>or use the <a href="https://rstudio.github.io/rstudioaddins/" target="_blank">RStudio Addin</a><sup>2</sup> &ldquo;Infinite Moon Reader&rdquo; to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.</li>
+</ul>
+
+<p>.footnote[
+[1] 中文用户请看<a href="http://slides.yihui.name/xaringan/zh-CN.html" target="_blank">这份教程</a></p>
+
+<p>[2] See <a href="https://github.com/yihui/xaringan/issues/2" target="_blank">#2</a> if you do not see the template or addin in RStudio.
+]</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>background-image: url(<a href="https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg" target="_blank">https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg</a>)
+background-position: 50% 50%
+class: center, bottom, inverse</p>
+
+<h1 id="you-only-live-once">You only live once!</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="hello-ninja">Hello Ninja</h1>
+
+<p>As a presentation ninja, you certainly should not be satisfied by the &ldquo;Hello World&rdquo; example. You need to understand more about two things:</p>
+
+<ol>
+<li><p>The <a href="https://remarkjs.com" target="_blank">remark.js</a> library;</p></li>
+
+<li><p>The <strong>xaringan</strong> package;</p></li>
+</ol>
+
+<p>Basically <strong>xaringan</strong> injected the chakra of R Markdown (minus Pandoc) into <strong>remark.js</strong>. The slides are rendered by remark.js in the web browser, and the Markdown source needed by remark.js is generated from R Markdown (<strong>knitr</strong>).</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="remark-js">remark.js</h1>
+
+<p>You can see an introduction of remark.js from <a href="https://remarkjs.com" target="_blank">its homepage</a>. You should read the <a href="https://github.com/gnab/remark/wiki" target="_blank">remark.js Wiki</a> at least once to know how to</p>
+
+<ul>
+<li><p>create a new slide (Markdown syntax<sup>*</sup> and slide properties);</p></li>
+
+<li><p>format a slide (e.g. text alignment);</p></li>
+
+<li><p>configure the slideshow;</p></li>
+
+<li><p>and use the presentation (keyboard shortcuts).</p></li>
+</ul>
+
+<p>It is important to be familiar with remark.js before you can understand the options in <strong>xaringan</strong>.</p>
+
+<p>.footnote[[*] It is different with Pandoc&rsquo;s Markdown! It is limited but should be enough for presentation purposes. Come on&hellip; You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js <a href="https://github.com/gnab/remark/issues/142" target="_blank">may be improved</a> in the future.]</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>background-image: url(<a href="https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg" target="_blank">https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg</a>)
+background-size: cover
+class: center, bottom, inverse</p>
+
+<h1 id="i-was-so-happy-to-have-discovered-remark-js">I was so happy to have discovered remark.js!</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>class: inverse, middle, center</p>
+
+<h1 id="using-xaringan">Using xaringan</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="xaringan-1">xaringan</h1>
+
+<p>Provides an R Markdown output format <code>xaringan::moon_reader</code> as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.</p>
+
+<pre><code class="language-yaml">---
+title: &quot;A Cool Presentation&quot;
+output:
+  xaringan::moon_reader:
+    yolo: true
+    nature:
+      autoplay: 30000
+---
+</code></pre>
+
+<p>See the help page <code>?xaringan::moon_reader</code> for all possible options that you can use.</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="remark-js-vs-xaringan">remark.js vs xaringan</h1>
+
+<p>Some differences between using remark.js (left) and using <strong>xaringan</strong> (right):</p>
+
+<p>.pull-left[
+1. Start with a boilerplate HTML file;</p>
+
+<ol>
+<li><p>Plain Markdown;</p></li>
+
+<li><p>Write JavaScript to autoplay slides;</p></li>
+
+<li><p>Manually configure MathJax;</p></li>
+
+<li><p>Highlight code with <code>*</code>;</p></li>
+
+<li><p>Edit Markdown source and refresh browser to see updated slides;
+]</p></li>
+</ol>
+
+<p>.pull-right[
+1. Start with an R Markdown document;</p>
+
+<ol>
+<li><p>R Markdown (can embed R/other code chunks);</p></li>
+
+<li><p>Provide an option <code>autoplay</code>;</p></li>
+
+<li><p>MathJax just works;<sup>*</sup></p></li>
+
+<li><p>Highlight code with <code>{{}}</code>;</p></li>
+
+<li><p>The RStudio addin &ldquo;Infinite Moon Reader&rdquo; automatically refreshes slides on changes;
+]</p></li>
+</ol>
+
+<p>.footnote[[*] Not really. See next page.]</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="math-expressions">Math Expressions</h1>
+
+<p>You can write LaTeX math expressions inside a pair of dollar signs, e.g. &#36;\alpha+\beta$ renders <code>\(\alpha+\beta\)</code>. You can use the display style with double dollar signs:</p>
+
+<pre><code>$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+</code></pre>
+
+<p><code>$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$</code></p>
+
+<p>Limitations:</p>
+
+<ol>
+<li><p>The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting <code>$$</code> must appear in the very beginning of a line, followed immediately by a non-space character, and the ending <code>$$</code> must be at the end of a line, led by a non-space character;</p></li>
+
+<li><p>There should not be spaces after the opening <code>$</code> or before the closing <code>$</code>.</p></li>
+
+<li><p>Math does not work on the title slide (see <a href="https://github.com/yihui/xaringan/issues/61" target="_blank">#61</a> for a workaround).</p></li>
+</ol>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="r-code">R Code</h1>
+
+<pre><code class="language-r"># a boring regression
+fit = lm(dist ~ 1 + speed, data = cars)
+coef(summary(fit))
+</code></pre>
+
+<pre><code>#               Estimate Std. Error   t value     Pr(&gt;|t|)
+# (Intercept) -17.579095  6.7584402 -2.601058 1.231882e-02
+# speed         3.932409  0.4155128  9.463990 1.489836e-12
+</code></pre>
+
+<pre><code class="language-r">dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
+grep('天', dojutsu, value = TRUE)
+</code></pre>
+
+<pre><code># character(0)
+</code></pre>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="r-plots">R Plots</h1>
+
+<pre><code class="language-r">par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19, col = 'darkgray', las = 1)
+abline(fit, lwd = 2)
+</code></pre>
+
+<p><img src="/slides/test_files/figure-html/cars-1.svg" width="672" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="tables">Tables</h1>
+
+<p>If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,</p>
+
+<pre><code class="language-r">knitr::kable(head(iris), format = 'html')
+</code></pre>
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> Sepal.Length </th>
+   <th style="text-align:right;"> Sepal.Width </th>
+   <th style="text-align:right;"> Petal.Length </th>
+   <th style="text-align:right;"> Petal.Width </th>
+   <th style="text-align:left;"> Species </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 5.1 </td>
+   <td style="text-align:right;"> 3.5 </td>
+   <td style="text-align:right;"> 1.4 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:left;"> setosa </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 4.9 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.4 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:left;"> setosa </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 4.7 </td>
+   <td style="text-align:right;"> 3.2 </td>
+   <td style="text-align:right;"> 1.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:left;"> setosa </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 4.6 </td>
+   <td style="text-align:right;"> 3.1 </td>
+   <td style="text-align:right;"> 1.5 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:left;"> setosa </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 3.6 </td>
+   <td style="text-align:right;"> 1.4 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:left;"> setosa </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 5.4 </td>
+   <td style="text-align:right;"> 3.9 </td>
+   <td style="text-align:right;"> 1.7 </td>
+   <td style="text-align:right;"> 0.4 </td>
+   <td style="text-align:left;"> setosa </td>
+  </tr>
+</tbody>
+</table>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="html-widgets">HTML Widgets</h1>
+
+<p>I have not thoroughly tested HTML widgets against <strong>xaringan</strong>. Some may work well, and some may not. It is a little tricky.</p>
+
+<p>Similarly, the Shiny mode (<code>runtime: shiny</code>) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.</p>
+
+<p>See the next page for two HTML widgets.</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<pre><code class="language-r">library(leaflet)
+leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
+</code></pre>
+
+<p><!--html_preserve--><div id="htmlwidget-8f5e0460fcdf792b8ee4" style="width:100%;height:576px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8f5e0460fcdf792b8ee4">{&ldquo;x&rdquo;:{&ldquo;options&rdquo;:{&ldquo;crs&rdquo;:{&ldquo;crsClass&rdquo;:&ldquo;L.CRS.EPSG3857&rdquo;,&ldquo;code&rdquo;:null,&ldquo;proj4def&rdquo;:null,&ldquo;projectedBounds&rdquo;:null,&ldquo;options&rdquo;:{}}},&ldquo;calls&rdquo;:[{&ldquo;method&rdquo;:&ldquo;addTiles&rdquo;,&ldquo;args&rdquo;:[&ldquo;//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&rdquo;,null,null,{&ldquo;minZoom&rdquo;:0,&ldquo;maxZoom&rdquo;:18,&ldquo;tileSize&rdquo;:256,&ldquo;subdomains&rdquo;:&ldquo;abc&rdquo;,&ldquo;errorTileUrl&rdquo;:&ldquo;&rdquo;,&ldquo;tms&rdquo;:false,&ldquo;noWrap&rdquo;:false,&ldquo;zoomOffset&rdquo;:0,&ldquo;zoomReverse&rdquo;:false,&ldquo;opacity&rdquo;:1,&ldquo;zIndex&rdquo;:1,&ldquo;detectRetina&rdquo;:false,&ldquo;attribution&rdquo;:&rdquo;&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap&lt;\/a&gt; contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA&lt;\/a&gt;&ldquo;}]}],&ldquo;setView&rdquo;:[[42.0285,-93.65],17,[]]},&ldquo;evals&rdquo;:[],&ldquo;jsHooks&rdquo;:[]}</script><!--/html_preserve--></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<pre><code class="language-r">DT::datatable(
+  head(iris, 10),
+  fillContainer = FALSE, options = list(pageLength = 8)
+)
+</code></pre>
+
+<p><!--html_preserve--><div id="htmlwidget-6554b5f087167bba82cb" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6554b5f087167bba82cb">{&ldquo;x&rdquo;:{&ldquo;filter&rdquo;:&ldquo;none&rdquo;,&ldquo;fillContainer&rdquo;:false,&ldquo;data&rdquo;:[[&ldquo;1&rdquo;,&ldquo;2&rdquo;,&ldquo;3&rdquo;,&ldquo;4&rdquo;,&ldquo;5&rdquo;,&ldquo;6&rdquo;,&ldquo;7&rdquo;,&ldquo;8&rdquo;,&ldquo;9&rdquo;,&ldquo;10&rdquo;],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],[&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;,&ldquo;setosa&rdquo;]],&ldquo;container&rdquo;:&rdquo;<table class=\"display\">\n  <thead>\n    <tr>\n      <th> &lt;\/th&gt;\n      <th>Sepal.Length&lt;\/th&gt;\n      <th>Sepal.Width&lt;\/th&gt;\n      <th>Petal.Length&lt;\/th&gt;\n      <th>Petal.Width&lt;\/th&gt;\n      <th>Species&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&ldquo;,&ldquo;options&rdquo;:{&ldquo;pageLength&rdquo;:8,&ldquo;columnDefs&rdquo;:[{&ldquo;className&rdquo;:&ldquo;dt-right&rdquo;,&ldquo;targets&rdquo;:[1,2,3,4]},{&ldquo;orderable&rdquo;:false,&ldquo;targets&rdquo;:0}],&ldquo;order&rdquo;:[],&ldquo;autoWidth&rdquo;:false,&ldquo;orderClasses&rdquo;:false,&ldquo;lengthMenu&rdquo;:[8,10,25,50,100]}},&ldquo;evals&rdquo;:[],&ldquo;jsHooks&rdquo;:[]}</script><!--/html_preserve--></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips">Some Tips</h1>
+
+<ul>
+<li><p>When you use the &ldquo;Infinite Moon Reader&rdquo; addin in RStudio, your R session will be blocked by default. You can click the red button on the right of the console to stop serving the slides, or use the <em>daemonized</em> mode so that it does not block your R session. To do the latter, you can set the option</p>
+
+<pre><code class="language-r">options(servr.daemon = TRUE)
+</code></pre>
+
+<p>in your current R session, or in <code>~/.Rprofile</code> so that it is applied to all future R sessions. I do the latter by myself.</p>
+
+<p>To know more about the web server, see the <a href="https://github.com/yihui/servr" target="_blank"><strong>servr</strong></a> package.</p></li>
+</ul>
+
+<p>&ndash;</p>
+
+<ul>
+<li><p>Do not forget to try the <code>yolo</code> option of <code>xaringan::moon_reader</code>.</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    yolo: true
+</code></pre></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips-1">Some Tips</h1>
+
+<ul>
+<li><p>Slides can be automatically played if you set the <code>autoplay</code> option under <code>nature</code>, e.g. go to the next slide every 30 seconds in a lightning talk:</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    nature:
+      autoplay: 30000
+</code></pre></li>
+</ul>
+
+<p>&ndash;</p>
+
+<ul>
+<li><p>A countdown timer can be added to every page of the slides using the <code>countdown</code> option under <code>nature</code>, e.g. if you want to spend one minute on every page when you give the talk, you can set:</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    nature:
+      countdown: 60000
+</code></pre>
+
+<p>Then you will see a timer counting down from <code>01:00</code>, to <code>00:59</code>, <code>00:58</code>, &hellip; When the time is out, the timer will continue but the time turns red.</p></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips-2">Some Tips</h1>
+
+<ul>
+<li><p>The title slide is created automatically by <strong>xaringan</strong>, but it is just another remark.js slide added before your other slides.</p>
+
+<p>The title slide is set to <code>class: center, middle, inverse, title-slide</code> by default. You can change the classes applied to the title slide with the <code>titleSlideClass</code> option of <code>nature</code> (<code>title-slide</code> is always applied).</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    nature:
+      titleSlideClass: [top, left, inverse]
+</code></pre></li>
+</ul>
+
+<p>&ndash;</p>
+
+<ul>
+<li><p>If you&rsquo;d like to create your own title slide, disable <strong>xaringan</strong>&rsquo;s title slide with the <code>seal = FALSE</code> option of <code>moon_reader</code>.</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    seal: false
+</code></pre></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips-3">Some Tips</h1>
+
+<ul>
+<li><p>There are several ways to build incremental slides. See <a href="https://slides.yihui.name/xaringan/incremental.html" target="_blank">this presentation</a> for examples.</p></li>
+
+<li><p>The option <code>highlightLines: true</code> of <code>nature</code> will highlight code lines that start with <code>*</code>, or are wrapped in <code>{{ }}</code>, or have trailing comments <code>#&lt;&lt;</code>;</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    nature:
+      highlightLines: true
+</code></pre>
+
+<p>See examples on the next page.</p></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips-4">Some Tips</h1>
+
+<p>.pull-left[
+An example using a leading <code>*</code>:</p>
+
+<pre><code>```r
+if (TRUE) {
+** message(&quot;Very important!&quot;)
+}
+```
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="language-r">if (TRUE) {
+* message(&quot;Very important!&quot;)
+}
+</code></pre>
+
+<p>This is invalid R code, so it is a plain fenced code block that is not executed.
+]</p>
+
+<p>.pull-right[
+An example using <code>{{}}</code>:</p>
+
+<pre><code>```{r tidy=FALSE}
+if (TRUE) {
+*{{ message(&quot;Very important!&quot;) }}
+}
+```
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="language-r">if (TRUE) {
+{{ message(&quot;Very important!&quot;) }}
+}
+</code></pre>
+
+<pre><code>## Very important!
+</code></pre>
+
+<p>It is valid R code so you can run it. Note that <code>{{}}</code> can wrap an R expression of multiple lines.
+]</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips-5">Some Tips</h1>
+
+<p>An example of using the trailing comment <code>#&lt;&lt;</code> to highlight lines:</p>
+
+<pre><code class="language-markdown">```{r tidy=FALSE}
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #&lt;&lt;
+  geom_smooth()    #&lt;&lt;
+```
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="language-r">library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #&lt;&lt;
+  geom_smooth()    #&lt;&lt;
+</code></pre>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips-6">Some Tips</h1>
+
+<p>When you enable line-highlighting, you can also use the chunk option <code>highlight.output</code> to highlight specific lines of the text output from a code chunk. For example, <code>highlight.output = TRUE</code> means highlighting all lines, and <code>highlight.output = c(1, 3)</code> means highlighting the first and third line.</p>
+
+<pre><code class="language-md">```{r, highlight.output=c(1, 3)}
+head(iris)
+```
+</code></pre>
+
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+</code></pre>
+
+<p>Question: what does <code>highlight.output = c(TRUE, FALSE)</code> mean? (Hint: think about R&rsquo;s recycling of vectors)</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="some-tips-7">Some Tips</h1>
+
+<ul>
+<li><p>To make slides work offline, you need to download a copy of remark.js in advance, because <strong>xaringan</strong> uses the online version by default (see the help page <code>?xaringan::moon_reader</code>).</p></li>
+
+<li><p>You can use <code>xaringan::summon_remark()</code> to download the latest or a specified version of remark.js. By default, it is downloaded to <code>libs/remark-latest.min.js</code>.</p></li>
+
+<li><p>Then change the <code>chakra</code> option in YAML to point to this file, e.g.</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+</code></pre></li>
+
+<li><p>If you used Google fonts in slides (the default theme uses <em>Yanone Kaffeesatz</em>, <em>Droid Serif</em>, and <em>Source Code Pro</em>), they won&rsquo;t work offline unless you download or install them locally. The Heroku app <a href="https://google-webfonts-helper.herokuapp.com/fonts" target="_blank">google-webfonts-helper</a> can help you download fonts and generate the necessary CSS.</p></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="macros">Macros</h1>
+
+<ul>
+<li><p>remark.js <a href="https://github.com/yihui/xaringan/issues/80" target="_blank">allows users to define custom macros</a> (JS functions) that can be applied to Markdown text using the syntax <code>![:macroName arg1, arg2, ...]</code> or <code>![:macroName arg1, arg2, ...](this)</code>. For example, before remark.js initializes the slides, you can define a macro named <code>scale</code>:</p>
+
+<pre><code class="language-js">remark.macros.scale = function (percentage) {
+  var url = this;
+  return '&lt;img src=&quot;' + url + '&quot; style=&quot;width: ' + percentage + '&quot; /&gt;';
+};
+</code></pre>
+
+<p>Then the Markdown text</p>
+
+<pre><code class="language-markdown">![:scale 50%](image.jpg)
+</code></pre>
+
+<p>will be translated to</p>
+
+<pre><code class="language-html">&lt;img src=&quot;image.jpg&quot; style=&quot;width: 50%&quot; /&gt;
+</code></pre></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="macros-continued">Macros (continued)</h1>
+
+<ul>
+<li><p>To insert macros in <strong>xaringan</strong> slides, you can use the option <code>beforeInit</code> under the option <code>nature</code>, e.g.,</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    nature:
+      beforeInit: &quot;macros.js&quot;
+</code></pre>
+
+<p>You save your remark.js macros in the file <code>macros.js</code>.</p></li>
+
+<li><p>The <code>beforeInit</code> option can be used to insert arbitrary JS code before <code>remark.create()</code>. Inserting macros is just one of its possible applications.</p></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="css">CSS</h1>
+
+<p>Among all options in <code>xaringan::moon_reader</code>, the most challenging but perhaps also the most rewarding one is <code>css</code>, because it allows you to customize the appearance of your slides using any CSS rules or hacks you know.</p>
+
+<p>You can see the default CSS file <a href="https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/default.css" target="_blank">here</a>. You can completely replace it with your own CSS files, or define new rules to override the default. See the help page <code>?xaringan::moon_reader</code> for more information.</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="css-1">CSS</h1>
+
+<p>For example, suppose you want to change the font for code from the default &ldquo;Source Code Pro&rdquo; to &ldquo;Ubuntu Mono&rdquo;. You can create a CSS file named, say, <code>ubuntu-mono.css</code>:</p>
+
+<pre><code class="language-css">@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+</code></pre>
+
+<p>Then set the <code>css</code> option in the YAML metadata:</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    css: [&quot;default&quot;, &quot;ubuntu-mono.css&quot;]
+</code></pre>
+
+<p>Here I assume <code>ubuntu-mono.css</code> is under the same directory as your Rmd.</p>
+
+<p>See <a href="https://github.com/yihui/xaringan/issues/83" target="_blank">yihui/xaringan#83</a> for an example of using the <a href="https://github.com/tonsky/FiraCode" target="_blank">Fira Code</a> font, which supports ligatures in program code.</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="themes">Themes</h1>
+
+<p>Don&rsquo;t want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files <code>foo.css</code> and <code>foo-fonts.css</code>, where <code>foo</code> is the theme name. Below are some existing themes:</p>
+
+<pre><code class="language-r">names(xaringan:::list_css())
+</code></pre>
+
+<pre><code>##  [1] &quot;chocolate-fonts&quot;  &quot;chocolate&quot;        &quot;default-fonts&quot;   
+##  [4] &quot;default&quot;          &quot;duke-blue&quot;        &quot;hygge-duke&quot;      
+##  [7] &quot;hygge&quot;            &quot;kunoichi&quot;         &quot;lucy-fonts&quot;      
+## [10] &quot;lucy&quot;             &quot;metropolis-fonts&quot; &quot;metropolis&quot;      
+## [13] &quot;middlebury-fonts&quot; &quot;middlebury&quot;       &quot;ninjutsu&quot;        
+## [16] &quot;rladies-fonts&quot;    &quot;rladies&quot;          &quot;robot-fonts&quot;     
+## [19] &quot;robot&quot;            &quot;rutgers-fonts&quot;    &quot;rutgers&quot;         
+## [22] &quot;shinobi&quot;          &quot;tamu-fonts&quot;       &quot;tamu&quot;            
+## [25] &quot;uo-fonts&quot;         &quot;uo&quot;
+</code></pre>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="themes-1">Themes</h1>
+
+<p>To use a theme, you can specify the <code>css</code> option as an array of CSS filenames (without the <code>.css</code> extensions), e.g.,</p>
+
+<pre><code class="language-yaml">output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts]
+</code></pre>
+
+<p>If you want to contribute a theme to <strong>xaringan</strong>, please read <a href="https://yihui.name/en/2017/10/xaringan-themes" target="_blank">this blog post</a>.</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>class: inverse, middle, center
+background-image: url(<a href="https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg</a>)
+background-size: contain</p>
+
+<h1 id="naruto">Naruto</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>background-image: url(<a href="https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg</a>)
+background-size: 100px
+background-position: 90% 8%</p>
+
+<h1 id="sharingan">Sharingan</h1>
+
+<p>The R package name <strong>xaringan</strong> was derived<sup>1</sup> from <strong>Sharingan</strong>, a dōjutsu in the Japanese anime <em>Naruto</em> with two abilities:</p>
+
+<ul>
+<li><p>the &ldquo;Eye of Insight&rdquo;</p></li>
+
+<li><p>the &ldquo;Eye of Hypnotism&rdquo;</p></li>
+</ul>
+
+<p>I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even &ldquo;hypnotize&rdquo; the audience.<sup>2,3</sup></p>
+
+<p>.footnote[
+[1] In Chinese, the pronounciation of <em>X</em> is <em>Sh</em> /ʃ/ (as in <em>shrimp</em>). Now you should have a better idea of how to pronounce my last name <em>Xie</em>.</p>
+
+<p>[2] By comparison, bad presentations only put the audience to sleep.</p>
+
+<p>[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
+]</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="naruto-terminology">Naruto terminology</h1>
+
+<p>The <strong>xaringan</strong> package borrowed a few terms from Naruto, such as</p>
+
+<ul>
+<li><p><a href="http://naruto.wikia.com/wiki/Sharingan" target="_blank">Sharingan</a> (写輪眼; the package name)</p></li>
+
+<li><p>The <a href="http://naruto.wikia.com/wiki/Moon_Reader" target="_blank">moon reader</a> (月読; an attractive R Markdown output format)</p></li>
+
+<li><p><a href="http://naruto.wikia.com/wiki/Chakra" target="_blank">Chakra</a> (查克拉; the path to the remark.js library, which is the power to drive the presentation)</p></li>
+
+<li><p><a href="http://naruto.wikia.com/wiki/Nature_Transformation" target="_blank">Nature transformation</a> (性質変化; transform the chakra by setting different options)</p></li>
+
+<li><p>The <a href="http://naruto.wikia.com/wiki/Infinite_Tsukuyomi" target="_blank">infinite moon reader</a> (無限月読; start a local web server to continuously serve your slides)</p></li>
+
+<li><p>The <a href="http://naruto.wikia.com/wiki/Summoning_Technique" target="_blank">summoning technique</a> (download remark.js from the web)</p></li>
+</ul>
+
+<p>You can click the links to know more about them if you want. The jutsu &ldquo;Moon Reader&rdquo; may seem a little evil, but that does not mean your slides are evil.</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>class: center</p>
+
+<h1 id="hand-seals-印">Hand seals (印)</h1>
+
+<p>Press <code>h</code> or <code>?</code> to see the possible ninjutsu you can use in remark.js.</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg" alt="" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>class: center, middle</p>
+
+<h1 id="thanks">Thanks!</h1>
+
+<p>Slides created via the R package <a href="https://github.com/yihui/xaringan" target="_blank"><strong>xaringan</strong></a>.</p>
+
+<p>The chakra comes from <a href="https://remarkjs.com" target="_blank">remark.js</a>, <a href="http://yihui.name/knitr" target="_blank"><strong>knitr</strong></a>, and <a href="https://rmarkdown.rstudio.com" target="_blank">R Markdown</a>.</p>
+
+    </section>
+    
+
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.min.js"></script>
+
+  <script>
+    window.revealPlugins = { dependencies: [
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/zoom-js/zoom.js', async: true },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/math/math.js', async: true },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/print-pdf/print-pdf.js', async: true },
+      
+      { src: '\/js\/vendor\/reveal.js\/plugin\/notes\/notes.js', async: true }
+    ]};
+
+    let revealDefaults = { center: true, controls: true, history: true, progress: true, transition: 'slide', mouseWheel: true };
+    let revealOptions = Object.assign({}, revealDefaults, revealPlugins);
+    Reveal.initialize(revealOptions);
+  </script>
+
+</body>
+</html>

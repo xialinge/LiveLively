@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides on Live Lively</title>
+    <link>/slides/</link>
+    <description>Recent content in Slides on Live Lively</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    
+	<atom:link href="/slides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Presentation Ninja</title>
+      <link>/slides/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/slides/test/</guid>
+      <description>background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg) ??? Image credit: Wikimedia Commons class: center, middle xaringan /ʃæ.&amp;lsquo;riŋ.ɡæn/ class: inverse, center, middle Get Started Hello World Install the xaringan package from Github: devtools::install_github(&amp;quot;yihui/xaringan&amp;quot;) &amp;ndash; You are recommended to use the RStudio IDE, but you do not have to. Create a new R Markdown document from the menu File</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/slides/example-slides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/slides/example-slides/</guid>
+      <description>Welcome to Slides Academic
+Features  Efficiently write slides in Markdown 3-in-1: Create, Present, and Publish your slides Supports speaker notes Mobile friendly slides  Controls  Next: Right Arrow or Space Previous: Left Arrow Start: Home Finish: End Overview: Esc Speaker notes: S Fullscreen: F Zoom: Alt + Click PDF Export: E  Code Highlighting Inline code: variable
+Code block:
+porridge = &amp;quot;blueberry&amp;quot; if porridge == &amp;quot;blueberry&amp;quot;: print(&amp;quot;Eating...&amp;quot;)  Math In-line math: $x + y = z$</description>
+    </item>
+    
+  </channel>
+</rss>
